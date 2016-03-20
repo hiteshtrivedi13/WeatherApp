@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.MainActivity">
+
+    <EditText
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:hint="Enter city name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/gpsIcon"/>
+
+    <ImageView
+        android:id="@+id/gpsIcon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="7dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/gps"/>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Search"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/cityName"/>
+
+    <TextView
+        android:id="@+id/searchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search History"
+        android:layout_below="@+id/btnSearch"
+        android:textSize="20dp"
+        android:textColor="@color/colorText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/previousSearchList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchTitle"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>
